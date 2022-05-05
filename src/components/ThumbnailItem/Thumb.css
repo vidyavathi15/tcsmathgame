@@ -1,0 +1,25 @@
+.thumbnail-item {
+    width: 80px;
+    margin: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .thumbnail-item {
+      width: 160px;
+    }
+  }
+  
+  .thumbnail-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  .thumbnail-image {
+    width: 100px;
+  }
+  @media screen and (min-width: 768px) {
+    .thumbnail-image {
+      width: 160px;
+    }
+  }
+  
