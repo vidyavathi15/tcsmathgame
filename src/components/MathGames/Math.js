@@ -290,12 +290,14 @@ class Math extends Component {
   generateRandomImageId = () => {
     this.setState({
       matchedImageId:
-        imagesList[Math.ceil(Math.random() * imagesList.length - 1)].id,
+        imagesList[Math.ceil(Math.random()* imagesList.length - 1)].id,
     })
   }
 
   setThumbnailScore = id => {
     const {initialSeconds, matchedImageId} = this.state
+    
+    
 
     if (initialSeconds === 0) {
       this.finishGameAndStopTimer()
@@ -303,10 +305,14 @@ class Math extends Component {
     if (matchedImageId !== id) {
       this.finishGameAndStopTimer()
     }
+    if(matchedImageId === id){
     this.setState(prevState => ({
       score: prevState.score + 1,
+      
     }))
-    this.generateRandomImageId()
+    this.generateRandomImageId() // this is where to call to generate randomImageId
+    
+  }
   }
 
   setActiveTabId = tabId => {
